@@ -16,13 +16,16 @@
       //delay(1);
     }
     }
-    setup =function() {
+    setup =async function() {
+      var hs=await loadSound('kontraa-psychedelic-trance-thiker-150bpm-276355.mp3');
+      hs.play();
       createCanvas(screen.width, screen.height);
       background(0, 255, 255);
     }
   var textoptions=["you are very high", "welcome to 2016"];
 
     draw = async function() {
+      hs.loop();
       let tx=random(0,800);
       let ty=random(0, 800);
       
