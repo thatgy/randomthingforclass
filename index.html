@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.10.0/p5.min.js"></script>
+<script>
+  ///I call this one, LSD
+  //credit for the sound goes to https://pixabay.com/sound-effects/search/psychedelic/ spacifically kontraaa
+  loopyellispse=function(){
+    var a1=0;
+    var a2=0;
+    while(a1+a2<500){
+    fill(225, mouseX*mouseY, a2+a1);
+      ellipse(400,400,a1, a2,000)
+      triangle(300,200, 200,200,200);
+    
+    a1+=random(-1,1);
+    a2++;
+      //delay(1);
+    }
+    }
+    setup =function() {
+      createCanvas(screen.width, screen.height);
+      background(0, 255, 255);
+    }
+  var textoptions=["you are very high", "welcome to 2016"];
+
+    draw = async function() {
+      let tx=random(0,800);
+      let ty=random(0, 800);
+      
+      text(textoptions[floor(random(0,2))],tx,ty);
+      fill(pmouseX, pmouseY, 200);
+      rect(mouseX, mouseY, 50, 50, mouseX+mouseY);
+     loopyellispse() 
+      
+    noStroke();
+      
+    }
+  
+  //new p5(sketch)
+</script>
